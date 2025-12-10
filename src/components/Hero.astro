@@ -1,0 +1,332 @@
+---
+---
+
+<section class="hero" id="inicio">
+  <div class="hero-background">
+    <div class="animated-shapes">
+      <span class="shape">🐾</span>
+      <span class="shape">🐈</span>
+      <span class="shape">❤️</span>
+      <span class="shape">🐶</span>
+      <span class="shape">🦮</span>
+      <span class="shape">🐱</span>
+      <span class="shape">🐕</span>
+      <span class="shape">🫶</span>
+    </div>
+  </div>
+  
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Fomentando el Amor y Respeto 
+      <span class="highlight">Hacia los Animales</span>
+    </h1>
+    <p class="hero-subtitle">
+      Colaboramos a respetar toda forma de vida. Trabajamos por la protección y buen trato a los animales, 
+      contribuyendo a la erradicación de todo tipo de violencia en su contra.
+    </p>
+    <div class="hero-buttons">
+      <a href="#adopcion" class="btn btn-primary">
+        <span>Adopta Ahora</span>
+        <span class="btn-icon">🐾</span>
+      </a>
+      <a href="#donar" class="btn btn-secondary">
+        <span>Dona</span>
+        <span class="btn-icon">❤️</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number" data-target="500">0</span>
+        <span class="stat-label">Rescates</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-target="350">0</span>
+        <span class="stat-label">Adopciones</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-target="50">0</span>
+        <span class="stat-label">Voluntarios</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Desliza</span>
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(135deg, #b90c29 0%, #b00715 100%);
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .animated-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .shape {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.4;
+    animation: float-random 20s infinite  ;
+  }
+
+  .shape:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+  .shape:nth-child(2) { left: 80%; top: 30%; animation-delay: 2s; }
+  .shape:nth-child(3) { left: 60%; top: 70%; animation-delay: 0s; }
+  .shape:nth-child(4) { left: 20%; top: 80%; animation-delay: 4s; }
+  .shape:nth-child(5) { left: 90%; top: 60%; animation-delay: 0s; }
+  .shape:nth-child(6) { left: 40%; top: 40%; animation-delay: 1s; }
+  .shape:nth-child(7) { left: 70%; top: 10%; animation-delay: 0s; }
+  .shape:nth-child(8) { left: 30%; top: 50%; animation-delay: 1s; }
+
+
+  @keyframes float-random {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(30px, -30px) rotate(90deg); }
+    50% { transform: translate(-20px, 20px) rotate(180deg); }
+    75% { transform: translate(40px, 10px) rotate(270deg); }
+  }
+
+  .hero-content {
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .highlight {
+    color: #FFC300;
+    display: inline-block;
+
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary {
+    background-color: #3a8afc; 
+    color: white;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(29, 53, 87, 0.5);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #E63946;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    opacity: 0.7;
+    animation: bounce-slow 2s infinite;
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+
+  .mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .wheel {
+    width: 3px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+  }
+
+  @keyframes scroll {
+    0% { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 20px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 5rem 1.5rem 3rem;
+    }
+
+    .hero-stats {
+      gap: 2rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Animated counter for stats
+  function animateCounter(element: HTMLElement) {
+    const target = parseInt(element.getAttribute('data-target') || '0');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current).toString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toString();
+      }
+    };
+
+    updateCounter();
+  }
+
+  // Start animation when hero is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach((counter) => animateCounter(counter as HTMLElement));
+        observer.disconnect();
+      }
+    });
+  });
+
+  const hero = document.querySelector('.hero');
+  if (hero) observer.observe(hero);
+</script>

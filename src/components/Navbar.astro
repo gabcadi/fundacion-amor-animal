@@ -1,0 +1,272 @@
+---
+---
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo">
+      <img class="logo-icon" src="/public/LogoFAA_Transparente.png" alt="Fundación Amor Animal CR Logo" />
+      <span class="logo-text">Fundación Amor Animal CR</span>
+    </a>
+    
+    <button class="mobile-toggle" id="mobileToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#adopcion">Adopción</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#donar" class="btn-donar">Donar ❤️</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E63946;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-icon {
+    width: 100px;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #E63946, #457B9D);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .nav-links a:hover {
+    color: #E63946;
+  }
+
+  .btn-donar {
+    background: linear-gradient(135deg, #e71a27, #C92A35);
+    color: white !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .btn-donar::after {
+    display: none;
+  }
+
+  .btn-donar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+  }
+
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  @media (max-width: 1024px) {
+    .btn-donar {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .logo-text {
+      display: none;
+    }
+
+    .logo-icon {
+      width: 80px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: white;
+      padding: 2rem;
+      gap: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .btn-donar {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-container {
+      padding: 1rem 1.5rem;
+    }
+
+    .logo-icon {
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-container {
+      padding: 0.8rem 1rem;
+    }
+
+    .logo-icon {
+      width: 60px;
+    }
+
+    .btn-donar {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+  }
+</style>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  // Scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  mobileToggle?.addEventListener('click', () => {
+    mobileToggle.classList.toggle('active');
+    navLinks?.classList.toggle('active');
+  });
+
+  // Close mobile menu when clicking a link
+  navLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileToggle?.classList.remove('active');
+      navLinks?.classList.remove('active');
+    });
+  });
+</script>

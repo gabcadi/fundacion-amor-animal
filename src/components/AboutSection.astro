@@ -1,0 +1,214 @@
+---
+---
+
+<section class="about" id="nosotros">
+  <div class="about-container">
+    <div class="section-header">
+      <span class="section-badge">Sobre Nosotros</span>
+      <h2>Nuestra Misión es Dar Amor y Esperanza</h2>
+      <p>Trabajamos incansablemente para proteger y mejorar la vida de los animales más vulnerables</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="card-icon">🐾</div>
+        <h3>Respeto</h3>
+        <p>Promovemos el respeto a todo ser viviente y su derecho a tener una vida digna.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-icon">⚖️</div>
+        <h3>Justicia</h3>
+        <p>Vigilamos para que se cumpla la Ley que asegura el bienestar de todo animal, denunciando actos que atenten contra cualquier especie.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-icon">👐</div>
+        <h3>Honestidad</h3>
+        <p>Transparencia e integridad en cada uno de nuestros actos como fundación.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-icon">🤝</div>
+        <h3>Compromiso</h3>
+        <p>Trabajamos en equipo para proteger la vida de los animales con plena responsabilidad.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-icon">🐶</div>
+        <h3>Lealtad</h3>
+        <p>Coherencia con el ordenamiento jurídico y reglamento de la fundación.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="card-icon">📢</div>
+        <h3>Activismo Social</h3>
+        <p>Educamos a la sociedad civil en el trato y cuidado a todos los animales.</p>
+      </div>
+    </div>
+
+    <div class="mission-vision">
+      <div class="mission">
+        <h3>🎯 Nuestra Misión</h3>
+        <p>Trabajar por el respeto, protección y buen trato a los animales, contribuyendo a la erradicación de todo tipo de violencia que se practica en su contra; mediante la educación e impulso a la aplicación de leyes de protección animal, salud pública y sostenibilidad ambiental a nivel nacional y en coordinación con organismos similares en el ámbito internacional.</p>
+      </div>
+      <div class="vision">
+        <h3>✨ Nuestra Visión</h3>
+        <p>Constituirnos en una organización consolidada en la promulgación y cumplimiento de las leyes de protección animal en procura de la salud pública y sostenibilidad ambiental, a través de la ética y valores necesarios para mediar en defensa de los intereses de los animales y su relación equilibrada con el ser humano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 6rem 2rem;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .about-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E63946, #457B9D, #1D3557);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+
+  .about-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: bounce-gentle 3s infinite;
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .about-card:nth-child(2) .card-icon { animation-delay: 0.5s; }
+  .about-card:nth-child(3) .card-icon { animation-delay: 1s; }
+  .about-card:nth-child(4) .card-icon { animation-delay: 1.5s; }
+
+  .about-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .about-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .mission, .vision {
+    background: linear-gradient(135deg, #E63946 0%, #457B9D 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission::before, .vision::before {
+    content: '🐾';
+    position: absolute;
+    font-size: 10rem;
+    opacity: 0.1;
+    right: -2rem;
+    bottom: -2rem;
+    transform: rotate(-20deg);
+  }
+
+  .mission h3, .vision h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mission p, .vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      padding: 4rem 1.5rem;
+    }
+
+    .about-grid {
+      gap: 1.5rem;
+    }
+
+    .mission, .vision {
+      padding: 2rem;
+    }
+  }
+</style>

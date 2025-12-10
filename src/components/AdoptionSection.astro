@@ -1,0 +1,314 @@
+---
+---
+
+<section class="adoption" id="adopcion">
+  <div class="adoption-container">
+    <div class="section-header">
+      <span class="section-badge">🏠 Adopción</span>
+      <h2>Encuentra a tu Nuevo Mejor Amigo</h2>
+      <p>Todos nuestros rescatados están esperando un hogar lleno de amor</p>
+    </div>
+
+    <div class="pets-grid">
+      <div class="pet-card">
+        <div class="pet-image">
+          <div class="pet-placeholder">🐕</div>
+          <span class="pet-status available">Disponible</span>
+        </div>
+        <div class="pet-info">
+          <h3>Max</h3>
+          <p class="pet-details">🐕 Perro • 🎂 2 años • ⚤ Macho</p>
+          <p class="pet-description">Cariñoso y juguetón, perfecto para familias activas. Le encanta correr y jugar.</p>
+          <button class="btn-adopt">Conocer a Max ❤️</button>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <div class="pet-image">
+          <div class="pet-placeholder">🐈</div>
+          <span class="pet-status available">Disponible</span>
+        </div>
+        <div class="pet-info">
+          <h3>Luna</h3>
+          <p class="pet-details">🐈 Gata • 🎂 1 año • ⚤ Hembra</p>
+          <p class="pet-description">Tranquila y mimosa, ideal para apartamentos. Le gusta dormir al sol.</p>
+          <button class="btn-adopt">Conocer a Luna ❤️</button>
+        </div>
+      </div>
+
+      <div class="pet-card">
+        <div class="pet-image">
+          <div class="pet-placeholder">🐈</div>
+          <span class="pet-status reserved">Reservado</span>
+        </div>
+        <div class="pet-info">
+          <h3>Mia</h3>
+          <p class="pet-details">🐈 Gata • 🎂 6 meses • ⚤ Hembra</p>
+          <p class="pet-description">Juguetona y curiosa. Le encanta explorar y trepar por todas partes.</p>
+          <button class="btn-adopt" disabled>Reservado</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="adoption-process">
+      <h3>Proceso de Adopción</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Conoce</h4>
+          <p>Visita nuestro refugio y conoce a los animales disponibles</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Entrevista</h4>
+          <p>Completa el formulario y entrevista para asegurar compatibilidad</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Preparación</h4>
+          <p>Prepara tu hogar con todo lo necesario para la llegada</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Adopción</h4>
+          <p>¡Lleva a tu nuevo amigo a casa y comienza la aventura!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .adoption {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    position: relative;
+  }
+
+  .adoption-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #f8f9fa;
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .pet-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .pet-image {
+    position: relative;
+    height: 250px;
+    background: linear-gradient(135deg, #E63946, #457B9D);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .pet-placeholder {
+    font-size: 8rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .pet-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .pet-status.available {
+    background: #10b981;
+    color: white;
+  }
+
+  .pet-status.reserved {
+    background: #f59e0b;
+    color: white;
+  }
+
+  .pet-info {
+    padding: 1.5rem;
+  }
+
+  .pet-info h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .pet-details {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .pet-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-adopt {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #E63946, #C92A35);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-adopt:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
+  }
+
+  .btn-adopt:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .adoption-process {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .adoption-process h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: 700;
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .step {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #E63946, #457B9D);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+  }
+
+  .step h4 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .step p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .step-arrow {
+    font-size: 2rem;
+    color: #E63946;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .adoption {
+      padding: 4rem 1.5rem;
+    }
+
+    .pets-grid {
+      gap: 1.5rem;
+    }
+
+    .adoption-process {
+      padding: 2rem;
+    }
+
+    .step-arrow {
+      display: none;
+    }
+
+    .steps {
+      flex-direction: column;
+    }
+  }
+</style>
