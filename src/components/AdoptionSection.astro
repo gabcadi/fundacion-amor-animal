@@ -56,7 +56,7 @@
         <div class="step">
           <div class="step-number">1</div>
           <h4>Conoce</h4>
-          <p>Visita nuestro refugio y conoce a los animales disponibles</p>
+          <p>Conoce a los animales en adopción</p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
@@ -73,6 +73,12 @@
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-number">4</div>
+          <h4>Contrato</h4>
+          <p>Firma de términos y condiciones por ambas partes</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">5</div>
           <h4>Adopción</h4>
           <p>¡Lleva a tu nuevo amigo a casa y comienza la aventura!</p>
         </div>
@@ -244,7 +250,7 @@
 
   .steps {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -254,6 +260,9 @@
     flex: 1;
     min-width: 150px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .step-number {
